@@ -1,70 +1,288 @@
-# Getting Started with Create React App
+# Contact Management with Multiple Apps
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern contact management web application that brings contacts and multiple communication channels into one unified interface.
+
+The application is designed to help users organize contacts, manage groups, track interactions, maintain follow-ups, and access communication channels such as WhatsApp, Instagram, SMS, email, calls, and messages from a single dashboard.
+
+## Features
+
+### Contact Management
+
+* Add and manage contacts
+* View detailed contact information
+* Organize contacts efficiently
+* Access individual contact details
+
+### Communication Management
+
+Manage and track different communication channels from one application:
+
+* WhatsApp
+* Instagram
+* SMS
+* Email
+* Calls
+* Messages
+
+### Groups
+
+* Create and manage contact groups
+* Organize contacts based on categories
+* Easily access grouped contacts
+
+### Interaction Tracking
+
+* Track communication history
+* Manage channel-based interactions
+* Maintain a centralized interaction log
+
+### Follow-Ups
+
+* Create follow-up activities
+* Track pending follow-ups
+* Manage communication reminders
+
+### Dashboard
+
+* Centralized overview of contact activities
+* Quick access to major application sections
+* Clean and responsive dashboard interface
+
+### User Experience
+
+* Responsive interface
+* Light and dark theme support
+* Toast notifications
+* Form validation
+* Error boundary handling
+* Client-side routing
+* Modern component-based architecture
+
+## Tech Stack
+
+| Technology      | Purpose                               |
+| --------------- | ------------------------------------- |
+| React 19        | Frontend UI                           |
+| TypeScript      | Type-safe development                 |
+| Vite            | Development and build tool            |
+| React Router    | Application routing                   |
+| Tailwind CSS    | Styling and responsive UI             |
+| React Query     | Client-side data and query management |
+| React Hook Form | Form management                       |
+| Zod             | Schema validation                     |
+| Lucide React    | UI icons                              |
+| PostCSS         | CSS processing                        |
+
+The repository's package configuration confirms the React, TypeScript, Vite, Tailwind CSS, React Router, React Query, React Hook Form, Zod, and Lucide React stack.
+
+## Application Structure
+
+```text
+Contact-Management-with-Multiple-Apps/
+│
+├── public/
+│
+├── src/
+│   ├── components/
+│   │   ├── common/
+│   │   ├── layout/
+│   │   └── ui/
+│   │
+│   ├── context/
+│   │   ├── ThemeContext
+│   │   └── UserProfileContext
+│   │
+│   ├── pages/
+│   │   ├── DashboardPage
+│   │   ├── ContactsPage
+│   │   ├── ContactDetailPage
+│   │   ├── GroupsPage
+│   │   ├── InteractionsPage
+│   │   ├── ChannelLogPage
+│   │   ├── FollowUpsPage
+│   │   └── SettingsPage
+│   │
+│   ├── App.tsx
+│   └── ...
+│
+├── .env.example
+├── index.html
+├── package.json
+├── tailwind.config.js
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
+```
+
+The current application routing includes dedicated pages for contacts, groups, messages, calls, emails, SMS, WhatsApp, Instagram, follow-ups, and settings.
+
+## Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Karthikeyan-k-u/Contact-Management-with-Multiple-Apps.git
+```
+
+### 2. Navigate to the Project
+
+```bash
+cd Contact-Management-with-Multiple-Apps
+```
+
+### 3. Install Dependencies
+
+```bash
+npm install
+```
+
+### 4. Configure Environment Variables
+
+If the project requires environment-specific configuration, create a `.env` file using the provided example:
+
+```bash
+cp .env.example .env
+```
+
+Update the required values inside `.env`.
+
+### 5. Start the Development Server
+
+```bash
+npm run dev
+```
+
+The Vite development server will provide the local URL in the terminal.
 
 ## Available Scripts
 
-In the project directory, you can run:
+### Development
 
-### `npm start`
+```bash
+npm run dev
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Starts the development server.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Production Build
 
-### `npm test`
+```bash
+npm run build
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Creates an optimized production build.
 
-### `npm run build`
+### Preview
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm run preview
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Runs the production build locally for preview.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Type Checking
 
-### `npm run eject`
+```bash
+npm run typecheck
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Checks the project for TypeScript errors.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+These scripts are defined in the repository's `package.json`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Application Routes
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+| Route           | Purpose                |
+| --------------- | ---------------------- |
+| `/`             | Dashboard              |
+| `/contacts`     | Contact management     |
+| `/contacts/:id` | Contact details        |
+| `/groups`       | Contact groups         |
+| `/messages`     | Messages               |
+| `/calls`        | Call history           |
+| `/emails`       | Email interactions     |
+| `/sms`          | SMS interactions       |
+| `/whatsapp`     | WhatsApp interactions  |
+| `/instagram`    | Instagram interactions |
+| `/follow-ups`   | Follow-up management   |
+| `/settings`     | Application settings   |
 
-## Learn More
+## Architecture
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The application follows a component-based React architecture.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Key architectural concepts include:
 
-### Code Splitting
+* Reusable React components
+* Context-based state management
+* Route-based page organization
+* React Query for query management
+* React Hook Form for form handling
+* Zod for validation
+* Error boundaries for application-level error handling
+* Theme provider for appearance management
+* Toast provider for user feedback
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The main application component combines routing, providers, error handling, theme management, user profile management, and query management.
 
-### Analyzing the Bundle Size
+## Design Goals
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The project focuses on:
 
-### Making a Progressive Web App
+* Centralized contact management
+* Multiple communication channels in one interface
+* Clean and responsive UI
+* Easy navigation
+* Organized interaction tracking
+* Reusable component architecture
+* Type-safe development
+* Maintainable frontend structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Future Improvements
 
-### Advanced Configuration
+Possible future enhancements include:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* Backend API integration
+* Cloud database synchronization
+* User authentication
+* Real-time messaging
+* Contact import and export
+* Advanced search and filtering
+* Notification system
+* Calendar integration
+* Automated follow-up reminders
+* Communication analytics
+* Mobile application support
 
-### Deployment
+## Screenshots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Add application screenshots here to showcase the dashboard, contact management, communication channels, groups, and follow-up pages.
 
-### `npm run build` fails to minify
+Example:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```markdown
+![Dashboard](./public/screenshots/dashboard.png)
+![Contacts](./public/screenshots/contacts.png)
+![Communication](./public/screenshots/communication.png)
+```
+
+## Project Purpose
+
+This project was developed as a practical frontend application to demonstrate how multiple communication and contact-management features can be organized within a single modern web interface.
+
+It also demonstrates the use of React, TypeScript, Vite, Tailwind CSS, routing, state management, form validation, and reusable UI components in a real-world style application.
+
+## Author
+
+**Karthikeyan K U**
+
+Computer Science and Engineering Student
+Frontend Developer | UI/UX Designer
+
+### GitHub
+
+https://github.com/Karthikeyan-k-u
+
+## License
+
+This project is available for educational and personal development purposes.
