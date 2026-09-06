@@ -237,18 +237,6 @@ Possible future enhancements include:
 * Communication analytics
 * Mobile application support
 
-## Screenshots
-
-Add application screenshots here to showcase the dashboard, contact management, communication channels, groups, and follow-up pages.
-
-Example:
-
-```markdown
-![Dashboard](./public/screenshots/dashboard.png)
-![Contacts](./public/screenshots/contacts.png)
-![Communication](./public/screenshots/communication.png)
-```
-
 ## Project Purpose
 
 This project was developed as a practical frontend application to demonstrate how multiple communication and contact-management features can be organized within a single modern web interface.
