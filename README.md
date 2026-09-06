@@ -58,23 +58,6 @@ Manage and track different communication channels from one application:
 * Client-side routing
 * Modern component-based architecture
 
-## Tech Stack
-
-| Technology      | Purpose                               |
-| --------------- | ------------------------------------- |
-| React 19        | Frontend UI                           |
-| TypeScript      | Type-safe development                 |
-| Vite            | Development and build tool            |
-| React Router    | Application routing                   |
-| Tailwind CSS    | Styling and responsive UI             |
-| React Query     | Client-side data and query management |
-| React Hook Form | Form management                       |
-| Zod             | Schema validation                     |
-| Lucide React    | UI icons                              |
-| PostCSS         | CSS processing                        |
-
-The repository's package configuration confirms the React, TypeScript, Vite, Tailwind CSS, React Router, React Query, React Hook Form, Zod, and Lucide React stack.
-
 ## Application Structure
 
 ```text
